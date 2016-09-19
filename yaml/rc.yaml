@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: kube-echo
+  namespace: pyconuk
+  labels:
+    run: kube-echo
+spec:
+  replicas: 1
+  selector:
+    run: kube-echo
+  template:
+    metadata:
+      namespace: pyconuk
+      labels:
+        run: kube-echo
+    spec:
+      containers:
+      - image: geku/go-app:0.1
+        name: kube-echo
+        ports:
+        - containerPort: 5000
+          protocol: TCP
+      restartPolicy: Always
