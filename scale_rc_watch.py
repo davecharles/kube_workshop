@@ -1,6 +1,8 @@
 """Demonstrate Replication Controller scaling.
 
-Exercise 4 - Use the cluster proxy to scale an RC.
+Exercise 5 - Use the cluster proxy to scale an RC, except here
+we are using the `watch` api to output the replica count when
+K8s notifies us of updates to the resource.
 """
 
 import kube

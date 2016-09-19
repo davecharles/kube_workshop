@@ -1,7 +1,7 @@
 """Demonstrate proxy usage.
 
 Exercise 3 - Get our demo replication controller using the cluster proxy.
-Instance a resource item from the raw data.
+We also instance a resource item from the raw data.
 """
 
 import kube
